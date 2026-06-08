@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Johpe Electronics — Tested Tech. True Warranties.</title>
+  <meta name="description" content="Hand-verified smartphones & laptops. Brand New & Premium Ex-UK. Delivered safely across Kenya." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════ APP HEADER ══════════════════ -->
+  <header class="app-header" id="app-header">
+    <div class="header-inner">
+
+      <!-- Brand Row -->
+      <div class="brand-row">
+        <a href="#" class="brand-logo">
+          <div class="logo-mark">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
+              <rect x="2" y="2" width="5" height="5" rx="1.2" fill="white"/>
+              <rect x="9" y="2" width="5" height="5" rx="1.2" fill="white" opacity=".55"/>
+              <rect x="2" y="9" width="5" height="5" rx="1.2" fill="white" opacity=".55"/>
+              <rect x="9" y="9" width="5" height="5" rx="1.2" fill="white"/>
+            </svg>
+          </div>
+          <span class="brand-name">Johpe</span>
+        </a>
+
+        <div class="header-actions">
+          <a href="https://wa.me/254729331163" target="_blank" class="wa-chip" aria-label="WhatsApp">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M13.5 2.5A7.5 7.5 0 0 0 2.12 11.88L1 15l3.22-1.1A7.5 7.5 0 1 0 13.5 2.5Z" fill="#25D366"/><path d="M11.25 9.75c-.19-.1-1.12-.55-1.3-.62-.17-.06-.3-.1-.43.1-.12.19-.5.62-.61.75-.11.12-.23.14-.42.05-.2-.1-.83-.3-1.57-.97-.58-.52-.97-1.16-1.09-1.35-.11-.2-.01-.3.09-.4.09-.09.2-.23.29-.35.1-.12.13-.2.2-.34.06-.14.03-.26-.02-.36-.05-.1-.43-1.04-.59-1.42-.15-.37-.31-.32-.43-.33h-.37c-.12 0-.33.05-.5.23-.17.18-.65.63-.65 1.54s.67 1.79.76 1.91c.1.12 1.31 2 3.18 2.8.44.19.79.3 1.06.39.45.14.86.12 1.18.07.36-.06 1.12-.46 1.28-.9.16-.44.16-.82.11-.9-.05-.08-.17-.13-.36-.22Z" fill="white"/></svg>
+            Chat
+          </a>
+          <button class="cart-trigger" onclick="openCart()" aria-label="View bag">
+            <span class="cart-trigger-icon">🛍️</span>
+            <span id="cart-count-badge" class="cart-badge hidden">0</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-container">
+        <div class="search-bar">
+          <span class="search-icon">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.6"/><path d="M10.5 10.5L13.5 13.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Search phones, laptops, brands…"
+            autocomplete="off"
+            oninput="handleSearchInput(this.value)"
+          />
+          <button id="search-clear" class="search-clear hidden" onclick="clearSearch()" aria-label="Clear search">✕</button>
+        </div>
+      </div>
+
+      <!-- Category Pill Track -->
+      <div class="pill-track-wrap">
+        <div class="pill-track" id="pill-track">
+          <button class="cat-pill active" data-cat="all"    onclick="selectCategory('all')">
+            <span class="pill-icon">✦</span> All
+          </button>
+          <button class="cat-pill" data-cat="promo"  onclick="selectCategory('promo')">
+            <span class="pill-icon">🔥</span> Hot Deals
+          </button>
+          <button class="cat-pill" data-cat="phone"  onclick="selectCategory('phone')">
+            <span class="pill-icon">📱</span> Phones
+          </button>
+          <button class="cat-pill" data-cat="laptop" onclick="selectCategory('laptop')">
+            <span class="pill-icon">💻</span> Laptops
+          </button>
+          <button class="cat-pill" data-cat="new"    onclick="selectCategory('new')">
+            <span class="pill-icon">🟢</span> Brand New
+          </button>
+          <button class="cat-pill" data-cat="exuk"   onclick="selectCategory('exuk')">
+            <span class="pill-icon">🔵</span> Ex-UK
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ══════════════════ HERO STRIP ══════════════════ -->
+  <section class="hero-strip">
+    <div class="hero-inner">
+      <div class="hero-pulse"><span></span> Delivering across Kenya</div>
+      <h1 class="hero-headline">Tested Tech.<br/>True Warranties.</h1>
+      <div class="hero-trust">
+        <span>✓ Hand-Verified</span>
+        <span>✓ Written Warranty</span>
+        <span>✓ M-Pesa</span>
+        <span>✓ Nationwide</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ SOCIAL PROOF STRIP ══════════════════ -->
+  <section class="reviews-strip">
+    <div class="reviews-header">
+      <span class="stars">★★★★★</span>
+      <span class="reviews-label">Trusted by Kenyans</span>
+    </div>
+    <div class="reviews-scroll">
+      <div class="review-card">
+        <div class="reviewer-row">
+          <div class="avatar av-blue">WK</div>
+          <div class="reviewer-meta">
+            <strong>Wanjiku K.</strong>
+            <span>Nairobi, Westlands</span>
+          </div>
+          <span class="review-stars">★★★★★</span>
+        </div>
+        <p>"Nilichukua iPhone 13 Pro hapa — battery was brand new & everything worked perfectly. They even tested it in front of me before I paid."</p>
+      </div>
+      <div class="review-card">
+        <div class="reviewer-row">
+          <div class="avatar av-green">BM</div>
+          <div class="reviewer-meta">
+            <strong>Brian M.</strong>
+            <span>Mombasa, Nyali</span>
+          </div>
+          <span class="review-stars">★★★★★</span>
+        </div>
+        <p>"Got a Dell Latitude Ex-UK for remote work. Fast delivery, charger included, warranty explained clearly. No hidden costs. My go-to shop."</p>
+      </div>
+      <div class="review-card">
+        <div class="reviewer-row">
+          <div class="avatar av-gold">AN</div>
+          <div class="reviewer-meta">
+            <strong>Amina N.</strong>
+            <span>Kisumu, Milimani</span>
+          </div>
+          <span class="review-stars">★★★★★</span>
+        </div>
+        <p>"Not a tech person at all — the Johpe team helped me pick the right Samsung. Ordered via WhatsApp, arrived next day. Brilliant service."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ DISCOVERY ZONE ══════════════════ -->
+  <main class="discovery-zone" id="discovery">
+
+    <!-- Feed Meta Bar -->
+    <div class="feed-meta">
+      <p id="feed-label" class="feed-label">✦ Discovery Feed</p>
+      <span id="feed-count" class="feed-count"></span>
+    </div>
+
+    <!-- Category Header (shown in filter mode) -->
+    <div id="category-header" class="category-header hidden">
+      <div class="cat-header-row">
+        <span id="category-header-icon" class="cat-header-icon"></span>
+        <h2 id="category-header-title" class="cat-header-title"></h2>
+        <button class="back-btn" onclick="selectCategory('all')">← All</button>
+      </div>
+      <p id="category-header-sub" class="cat-header-sub"></p>
+    </div>
+
+    <!-- No Results -->
+    <div id="no-results" class="no-results hidden">
+      <span class="no-results-icon">🔍</span>
+      <p class="no-results-title">No products found</p>
+      <p class="no-results-sub">Try a different search or category</p>
+      <button class="clear-link" onclick="clearSearch()">Clear search</button>
+    </div>
+
+    <!-- Master Catalog Grid -->
+    <div id="catalog-feed" class="catalog-grid"></div>
+
+  </main>
+
+  <!-- ══════════════════ ABOUT ══════════════════ -->
+  <section id="about" class="about-section">
+    <div class="about-inner">
+      <span class="about-eyebrow">Our Story</span>
+      <h2 class="about-heading">Built on Honesty.<br/>Powered by Verification.</h2>
+      <p class="about-body">Johpe Electronics was born from a simple frustration — too many Kenyans were buying phones and laptops that failed within weeks, with no recourse. We personally test every single device before it leaves our hands: battery health, screen integrity, camera quality, general function.</p>
+      <a href="https://wa.me/254729331163" target="_blank" class="about-cta">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 2.5A7.5 7.5 0 0 0 2.12 11.88L1 15l3.22-1.1A7.5 7.5 0 1 0 13.5 2.5Z" fill="#25D366"/><path d="M11.25 9.75c-.19-.1-1.12-.55-1.3-.62-.17-.06-.3-.1-.43.1-.12.19-.5.62-.61.75-.11.12-.23.14-.42.05-.2-.1-.83-.3-1.57-.97-.58-.52-.97-1.16-1.09-1.35-.11-.2-.01-.3.09-.4.09-.09.2-.23.29-.35.1-.12.13-.2.2-.34.06-.14.03-.26-.02-.36-.05-.1-.43-1.04-.59-1.42-.15-.37-.31-.32-.43-.33h-.37c-.12 0-.33.05-.5.23-.17.18-.65.63-.65 1.54s.67 1.79.76 1.91c.1.12 1.31 2 3.18 2.8.44.19.79.3 1.06.39.45.14.86.12 1.18.07.36-.06 1.12-.46 1.28-.9.16-.44.16-.82.11-.9-.05-.08-.17-.13-.36-.22Z" fill="white"/></svg>
+        Chat With Us on WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════ FOOTER ══════════════════ -->
+  <footer class="site-footer">
+    <p>© 2025 Johpe Electronics · Nairobi, Kenya</p>
+    <p>📞 <a href="https://wa.me/254729331163">+254 729 331 163</a></p>
+  </footer>
+
+  <!-- ══════════════════ BOTTOM BAR ══════════════════ -->
+  <div class="bottom-bar">
+    <button class="bottom-btn" onclick="openHelper()">
+      <span class="bottom-btn-icon">🤔</span>
+      <div class="bottom-btn-text">
+        <strong>Help Me Choose</strong>
+        <span>Free advice</span>
+      </div>
+    </button>
+    <div class="bottom-divider"></div>
+    <button class="bottom-btn" onclick="openCart()">
+      <div class="bottom-btn-icon-wrap">
+        <span class="bottom-btn-icon">🛍️</span>
+      </div>
+      <div class="bottom-btn-text">
+        <strong>My Bag</strong>
+        <span id="cart-total-label">KES 0</span>
+      </div>
+    </button>
+  </div>
+
+  <!-- ══════════════════ HELP MODAL ══════════════════ -->
+  <div id="helper-modal" class="modal-overlay hidden" onclick="handleOverlayClick(event,'helper-modal')">
+    <div class="modal-sheet">
+      <div class="modal-handle"></div>
+      <h3 class="modal-title">Help Me Choose 🎯</h3>
+      <p class="modal-sub">Tell us what you need — we'll show the right products.</p>
+
+      <p class="modal-section-label">💰 What's your budget?</p>
+      <div class="helper-grid">
+        <button class="helper-btn" onclick="applyHelperFilter('budget-low')">
+          <strong>Under KES 25,000</strong>
+          <span>Basic & reliable picks</span>
+        </button>
+        <button class="helper-btn" onclick="applyHelperFilter('budget-mid')">
+          <strong>KES 25k – 60k</strong>
+          <span>Mid-range performers</span>
+        </button>
+        <button class="helper-btn" onclick="applyHelperFilter('budget-high')">
+          <strong>KES 60k – 100k</strong>
+          <span>Premium flagships</span>
+        </button>
+        <button class="helper-btn" onclick="applyHelperFilter('budget-premium')">
+          <strong>KES 100k+</strong>
+          <span>Top-of-the-line</span>
+        </button>
+      </div>
+
+      <p class="modal-section-label">🖥️ What do you need it for?</p>
+      <div class="helper-list">
+        <button class="helper-btn wide" onclick="applyHelperFilter('use-phone')">
+          <strong>📱 I need a smartphone</strong>
+          <span>Calls, social media, camera</span>
+        </button>
+        <button class="helper-btn wide" onclick="applyHelperFilter('use-work')">
+          <strong>💼 Work & Office tasks</strong>
+          <span>Documents, spreadsheets, video calls</span>
+        </button>
+        <button class="helper-btn wide" onclick="applyHelperFilter('use-student')">
+          <strong>🎓 Student / Learning</strong>
+          <span>Research, assignments, online classes</span>
+        </button>
+        <button class="helper-btn wide" onclick="applyHelperFilter('use-promo')">
+          <strong>🔥 Show me the best deals</strong>
+          <span>Flash promos & discounted stock</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ CART MODAL ══════════════════ -->
+  <div id="cart-modal" class="modal-overlay hidden" onclick="handleOverlayClick(event,'cart-modal')">
+    <div class="modal-sheet">
+      <div class="modal-handle"></div>
+      <h3 class="modal-title">My Bag 🛍️</h3>
+      <p class="modal-sub">Review your order before confirming</p>
+
+      <div id="cart-items-list" class="cart-list"></div>
+
+      <div id="cart-empty" class="cart-empty hidden">
+        <span>🛒</span>
+        <p>Your bag is empty</p>
+        <span>Add items from the catalog above</span>
+      </div>
+
+      <div id="cart-footer" class="cart-footer hidden">
+        <div class="cart-total-row">
+          <span>Total</span>
+          <strong id="cart-grand-total">KES 0</strong>
+        </div>
+        <button class="checkout-btn" onclick="checkoutWhatsApp()">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M13.5 2.5A7.5 7.5 0 0 0 2.12 11.88L1 15l3.22-1.1A7.5 7.5 0 1 0 13.5 2.5Z" fill="white"/><path d="M11.25 9.75c-.19-.1-1.12-.55-1.3-.62-.17-.06-.3-.1-.43.1-.12.19-.5.62-.61.75-.11.12-.23.14-.42.05-.2-.1-.83-.3-1.57-.97-.58-.52-.97-1.16-1.09-1.35-.11-.2-.01-.3.09-.4.09-.09.2-.23.29-.35.1-.12.13-.2.2-.34.06-.14.03-.26-.02-.36-.05-.1-.43-1.04-.59-1.42-.15-.37-.31-.32-.43-.33h-.37c-.12 0-.33.05-.5.23-.17.18-.65.63-.65 1.54s.67 1.79.76 1.91c.1.12 1.31 2 3.18 2.8.44.19.79.3 1.06.39.45.14.86.12 1.18.07.36-.06 1.12-.46 1.28-.9.16-.44.16-.82.11-.9-.05-.08-.17-.13-.36-.22Z" fill="#25D366"/></svg>
+          Confirm Order via WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite">✓ Added to bag</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
