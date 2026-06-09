@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Johpe Electronics — Tested Tech. True Warranties.</title>
-  <meta name="description" content="Hand-verified smartphones & laptops. Brand New & Premium Ex-UK. Delivered safely across Kenya." />
+  <meta name="description" content="Hand-verified smartphones, laptops, audio & accessories. Brand New & Premium Ex-UK. Delivered across Kenya." />
+  <meta name="theme-color" content="#0A3875" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
@@ -15,28 +16,33 @@
   <header class="app-header" id="app-header">
     <div class="header-inner">
 
-      <!-- Brand Row -->
       <div class="brand-row">
-        <a href="#" class="brand-logo">
+        <a href="#" class="brand-logo" aria-label="Johpe Electronics home">
           <div class="logo-mark">
-            <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <rect x="2" y="2" width="5" height="5" rx="1.2" fill="white"/>
-              <rect x="9" y="2" width="5" height="5" rx="1.2" fill="white" opacity=".55"/>
-              <rect x="2" y="9" width="5" height="5" rx="1.2" fill="white" opacity=".55"/>
+              <rect x="9" y="2" width="5" height="5" rx="1.2" fill="white" opacity=".5"/>
+              <rect x="2" y="9" width="5" height="5" rx="1.2" fill="white" opacity=".5"/>
               <rect x="9" y="9" width="5" height="5" rx="1.2" fill="white"/>
             </svg>
           </div>
-          <span class="brand-name">Johpe</span>
+          <div class="brand-logo-text">
+            <span class="brand-name">Johpe</span>
+            <span class="brand-tagline">Electronics · Nairobi</span>
+          </div>
         </a>
 
         <div class="header-actions">
-          <a href="https://wa.me/254729331163" target="_blank" class="wa-chip" aria-label="WhatsApp">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M13.5 2.5A7.5 7.5 0 0 0 2.12 11.88L1 15l3.22-1.1A7.5 7.5 0 1 0 13.5 2.5Z" fill="#25D366"/><path d="M11.25 9.75c-.19-.1-1.12-.55-1.3-.62-.17-.06-.3-.1-.43.1-.12.19-.5.62-.61.75-.11.12-.23.14-.42.05-.2-.1-.83-.3-1.57-.97-.58-.52-.97-1.16-1.09-1.35-.11-.2-.01-.3.09-.4.09-.09.2-.23.29-.35.1-.12.13-.2.2-.34.06-.14.03-.26-.02-.36-.05-.1-.43-1.04-.59-1.42-.15-.37-.31-.32-.43-.33h-.37c-.12 0-.33.05-.5.23-.17.18-.65.63-.65 1.54s.67 1.79.76 1.91c.1.12 1.31 2 3.18 2.8.44.19.79.3 1.06.39.45.14.86.12 1.18.07.36-.06 1.12-.46 1.28-.9.16-.44.16-.82.11-.9-.05-.08-.17-.13-.36-.22Z" fill="white"/></svg>
+          <a href="https://wa.me/254799776990" target="_blank" rel="noopener" class="wa-chip" aria-label="Chat on WhatsApp">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M13.5 2.5A7.5 7.5 0 0 0 2.12 11.88L1 15l3.22-1.1A7.5 7.5 0 1 0 13.5 2.5Z" fill="#25D366"/>
+              <path d="M11.25 9.75c-.19-.1-1.12-.55-1.3-.62-.17-.06-.3-.1-.43.1-.12.19-.5.62-.61.75-.11.12-.23.14-.42.05-.2-.1-.83-.3-1.57-.97-.58-.52-.97-1.16-1.09-1.35-.11-.2-.01-.3.09-.4.09-.09.2-.23.29-.35.1-.12.13-.2.2-.34.06-.14.03-.26-.02-.36-.05-.1-.43-1.04-.59-1.42-.15-.37-.31-.32-.43-.33h-.37c-.12 0-.33.05-.5.23-.17.18-.65.63-.65 1.54s.67 1.79.76 1.91c.1.12 1.31 2 3.18 2.8.44.19.79.3 1.06.39.45.14.86.12 1.18.07.36-.06 1.12-.46 1.28-.9.16-.44.16-.82.11-.9-.05-.08-.17-.13-.36-.22Z" fill="white"/>
+            </svg>
             Chat
           </a>
           <button class="cart-trigger" onclick="openCart()" aria-label="View bag">
-            <span class="cart-trigger-icon">🛍️</span>
-            <span id="cart-count-badge" class="cart-badge hidden">0</span>
+            <span class="cart-trigger-icon" aria-hidden="true">🛍️</span>
+            <span id="cart-count-badge" class="cart-badge hidden" aria-live="polite">0</span>
           </button>
         </div>
       </div>
@@ -44,255 +50,469 @@
       <!-- Search Bar -->
       <div class="search-container">
         <div class="search-bar">
-          <span class="search-icon">
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.6"/><path d="M10.5 10.5L13.5 13.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span class="search-icon" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+              <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M10.5 10.5L13.5 13.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
           </span>
-          <input
-            id="search-input"
-            type="search"
-            placeholder="Search phones, laptops, brands…"
-            autocomplete="off"
-            oninput="handleSearchInput(this.value)"
-          />
+          <input id="search-input" type="search" placeholder="Search phones, laptops, audio…"
+            autocomplete="off" aria-label="Search products" oninput="handleSearchInput(this.value)" />
           <button id="search-clear" class="search-clear hidden" onclick="clearSearch()" aria-label="Clear search">✕</button>
         </div>
       </div>
 
-      <!-- Category Pill Track -->
-      <div class="pill-track-wrap">
+      <!-- Category Pills -->
+      <nav class="pill-track-wrap" aria-label="Product categories">
         <div class="pill-track" id="pill-track">
-          <button class="cat-pill active" data-cat="all"    onclick="selectCategory('all')">
-            <span class="pill-icon">✦</span> All
-          </button>
-          <button class="cat-pill" data-cat="promo"  onclick="selectCategory('promo')">
-            <span class="pill-icon">🔥</span> Hot Deals
-          </button>
-          <button class="cat-pill" data-cat="phone"  onclick="selectCategory('phone')">
-            <span class="pill-icon">📱</span> Phones
-          </button>
-          <button class="cat-pill" data-cat="laptop" onclick="selectCategory('laptop')">
-            <span class="pill-icon">💻</span> Laptops
-          </button>
-          <button class="cat-pill" data-cat="new"    onclick="selectCategory('new')">
-            <span class="pill-icon">🟢</span> Brand New
-          </button>
-          <button class="cat-pill" data-cat="exuk"   onclick="selectCategory('exuk')">
-            <span class="pill-icon">🔵</span> Ex-UK
-          </button>
+          <button class="cat-pill active" data-cat="all"         onclick="selectCategory('all')"><span class="pill-icon">✦</span> All</button>
+          <button class="cat-pill" data-cat="promo"              onclick="selectCategory('promo')"><span class="pill-icon">🔥</span> Deals</button>
+          <button class="cat-pill" data-cat="smartphones"        onclick="selectCategory('smartphones')"><span class="pill-icon">📱</span> Phones</button>
+          <button class="cat-pill" data-cat="laptops"            onclick="selectCategory('laptops')"><span class="pill-icon">💻</span> Laptops</button>
+          <button class="cat-pill" data-cat="audio"              onclick="selectCategory('audio')"><span class="pill-icon">🎵</span> Audio</button>
+          <button class="cat-pill" data-cat="power"              onclick="selectCategory('power')"><span class="pill-icon">⚡</span> Power</button>
+          <button class="cat-pill" data-cat="accessories"        onclick="selectCategory('accessories')"><span class="pill-icon">🔌</span> Accessories</button>
+          <button class="cat-pill" data-cat="new"                onclick="selectCategory('new')"><span class="pill-icon">🟢</span> Brand New</button>
+          <button class="cat-pill" data-cat="exuk"               onclick="selectCategory('exuk')"><span class="pill-icon">🔵</span> Ex-UK</button>
         </div>
-      </div>
+      </nav>
 
     </div>
   </header>
 
   <!-- ══════════════════ HERO STRIP ══════════════════ -->
-  <section class="hero-strip">
+  <section class="hero-strip" aria-label="Hero">
     <div class="hero-inner">
-      <div class="hero-pulse"><span></span> Delivering across Kenya</div>
-      <h1 class="hero-headline">Tested Tech.<br/>True Warranties.</h1>
-      <div class="hero-trust">
-        <span>✓ Hand-Verified</span>
-        <span>✓ Written Warranty</span>
-        <span>✓ M-Pesa</span>
-        <span>✓ Nationwide</span>
+      <div class="hero-pulse">
+        <span aria-hidden="true"></span>
+        Delivering across Kenya
+      </div>
+      <h1 class="hero-headline">Tested Tech.<br/><em>True Warranties.</em></h1>
+      <p class="hero-sub">Phones · Laptops · Audio · Power · Accessories</p>
+      <div class="hero-trust" role="list">
+        <span role="listitem">✓ Hand-Verified</span>
+        <span role="listitem">✓ Written Warranty</span>
+        <span role="listitem">✓ M-Pesa</span>
+        <span role="listitem">✓ Nationwide</span>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════ SOCIAL PROOF STRIP ══════════════════ -->
-  <section class="reviews-strip">
-    <div class="reviews-header">
-      <span class="stars">★★★★★</span>
-      <span class="reviews-label">Trusted by Kenyans</span>
+  <!-- ══════════════════ TRUST BAR ══════════════════ -->
+  <div class="trust-bar" aria-label="Trust signals">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <span class="trust-item-icon" aria-hidden="true">🛡️</span>
+        <div class="trust-item-text"><strong>Every Device Tested</strong><span>Battery · Screen · Camera</span></div>
+      </div>
+      <div class="trust-bar-sep" aria-hidden="true"></div>
+      <div class="trust-item">
+        <span class="trust-item-icon" aria-hidden="true">📦</span>
+        <div class="trust-item-text"><strong>Fast Delivery</strong><span>Nairobi same-day</span></div>
+      </div>
+      <div class="trust-bar-sep" aria-hidden="true"></div>
+      <div class="trust-item">
+        <span class="trust-item-icon" aria-hidden="true">💳</span>
+        <div class="trust-item-text"><strong>M-Pesa Accepted</strong><span>Instant confirmation</span></div>
+      </div>
+      <div class="trust-bar-sep" aria-hidden="true"></div>
+      <div class="trust-item">
+        <span class="trust-item-icon" aria-hidden="true">🔄</span>
+        <div class="trust-item-text"><strong>Trade-in Welcome</strong><span>Get credit on upgrade</span></div>
+      </div>
     </div>
-    <div class="reviews-scroll">
-      <div class="review-card">
-        <div class="reviewer-row">
-          <div class="avatar av-blue">WK</div>
-          <div class="reviewer-meta">
-            <strong>Wanjiku K.</strong>
-            <span>Nairobi, Westlands</span>
-          </div>
-          <span class="review-stars">★★★★★</span>
-        </div>
-        <p>"Nilichukua iPhone 13 Pro hapa — battery was brand new & everything worked perfectly. They even tested it in front of me before I paid."</p>
+  </div>
+
+  <!-- ══════════════════ SOCIAL PROOF ══════════════════ -->
+  <section class="reviews-strip" aria-label="Customer reviews">
+    <div class="reviews-header">
+      <div class="reviews-rating-block">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <div class="reviews-label">Trusted by Kenyans</div>
+        <div class="reviews-count">200+ happy customers</div>
       </div>
-      <div class="review-card">
+    </div>
+    <div class="reviews-scroll" role="list">
+      <div class="review-card" role="listitem">
         <div class="reviewer-row">
-          <div class="avatar av-green">BM</div>
-          <div class="reviewer-meta">
-            <strong>Brian M.</strong>
-            <span>Mombasa, Nyali</span>
-          </div>
-          <span class="review-stars">★★★★★</span>
+          <div class="avatar av-blue" aria-hidden="true">WK</div>
+          <div class="reviewer-meta"><strong>Wanjiku K.</strong><span>Nairobi, Westlands</span></div>
+          <div class="review-stars-row"><span class="review-stars" aria-label="5 stars">★★★★★</span></div>
         </div>
-        <p>"Got a Dell Latitude Ex-UK for remote work. Fast delivery, charger included, warranty explained clearly. No hidden costs. My go-to shop."</p>
+        <p>"Nilichukua iPhone 13 Pro hapa — battery was brand new & everything worked perfectly. Tested in front of me before I paid."</p>
       </div>
-      <div class="review-card">
+      <div class="review-card" role="listitem">
         <div class="reviewer-row">
-          <div class="avatar av-gold">AN</div>
-          <div class="reviewer-meta">
-            <strong>Amina N.</strong>
-            <span>Kisumu, Milimani</span>
-          </div>
-          <span class="review-stars">★★★★★</span>
+          <div class="avatar av-green" aria-hidden="true">BM</div>
+          <div class="reviewer-meta"><strong>Brian M.</strong><span>Mombasa, Nyali</span></div>
+          <div class="review-stars-row"><span class="review-stars" aria-label="5 stars">★★★★★</span></div>
         </div>
-        <p>"Not a tech person at all — the Johpe team helped me pick the right Samsung. Ordered via WhatsApp, arrived next day. Brilliant service."</p>
+        <p>"Got a Dell Latitude Ex-UK for remote work. Fast delivery, charger included, warranty explained clearly. My go-to shop."</p>
+      </div>
+      <div class="review-card" role="listitem">
+        <div class="reviewer-row">
+          <div class="avatar av-gold" aria-hidden="true">AN</div>
+          <div class="reviewer-meta"><strong>Amina N.</strong><span>Kisumu, Milimani</span></div>
+          <div class="review-stars-row"><span class="review-stars" aria-label="5 stars">★★★★★</span></div>
+        </div>
+        <p>"Got the JBL Charge 5 and Samsung buds — both genuine, arrived same day. Johpe is the real deal for electronics in Nairobi."</p>
+      </div>
+      <div class="review-card" role="listitem">
+        <div class="reviewer-row">
+          <div class="avatar av-blue" aria-hidden="true">PO</div>
+          <div class="reviewer-meta"><strong>Peter O.</strong><span>Eldoret</span></div>
+          <div class="review-stars-row"><span class="review-stars" aria-label="5 stars">★★★★★</span></div>
+        </div>
+        <p>"MacBook Air M2 delivered upcountry in 2 days. Sealed box, full warranty card. Price was fair and M-Pesa payment was seamless."</p>
       </div>
     </div>
   </section>
 
   <!-- ══════════════════ DISCOVERY ZONE ══════════════════ -->
-  <main class="discovery-zone" id="discovery">
+  <main class="discovery-zone" id="discovery" aria-label="Product catalog">
 
-    <!-- Feed Meta Bar -->
-    <div class="feed-meta">
+    <div class="feed-meta" aria-live="polite">
       <p id="feed-label" class="feed-label">✦ Discovery Feed</p>
       <span id="feed-count" class="feed-count"></span>
     </div>
 
-    <!-- Category Header (shown in filter mode) -->
-    <div id="category-header" class="category-header hidden">
+    <div id="category-header" class="category-header hidden" aria-live="polite">
       <div class="cat-header-row">
-        <span id="category-header-icon" class="cat-header-icon"></span>
+        <span id="category-header-icon" class="cat-header-icon" aria-hidden="true"></span>
         <h2 id="category-header-title" class="cat-header-title"></h2>
-        <button class="back-btn" onclick="selectCategory('all')">← All</button>
+        <button class="back-btn" onclick="selectCategory('all')" aria-label="Back to all products">← All</button>
       </div>
       <p id="category-header-sub" class="cat-header-sub"></p>
     </div>
 
-    <!-- No Results -->
-    <div id="no-results" class="no-results hidden">
-      <span class="no-results-icon">🔍</span>
+    <div id="no-results" class="no-results hidden" role="status">
+      <span class="no-results-icon" aria-hidden="true">🔍</span>
       <p class="no-results-title">No products found</p>
       <p class="no-results-sub">Try a different search or category</p>
       <button class="clear-link" onclick="clearSearch()">Clear search</button>
     </div>
 
-    <!-- Master Catalog Grid -->
-    <div id="catalog-feed" class="catalog-grid"></div>
+    <div id="catalog-feed" class="catalog-grid" role="list"></div>
 
   </main>
 
   <!-- ══════════════════ ABOUT ══════════════════ -->
-  <section id="about" class="about-section">
+  <section id="about" class="about-section" aria-label="About Johpe Electronics">
     <div class="about-inner">
-      <span class="about-eyebrow">Our Story</span>
+      <span class="about-eyebrow">✦ Our Story</span>
       <h2 class="about-heading">Built on Honesty.<br/>Powered by Verification.</h2>
-      <p class="about-body">Johpe Electronics was born from a simple frustration — too many Kenyans were buying phones and laptops that failed within weeks, with no recourse. We personally test every single device before it leaves our hands: battery health, screen integrity, camera quality, general function.</p>
-      <a href="https://wa.me/254729331163" target="_blank" class="about-cta">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 2.5A7.5 7.5 0 0 0 2.12 11.88L1 15l3.22-1.1A7.5 7.5 0 1 0 13.5 2.5Z" fill="#25D366"/><path d="M11.25 9.75c-.19-.1-1.12-.55-1.3-.62-.17-.06-.3-.1-.43.1-.12.19-.5.62-.61.75-.11.12-.23.14-.42.05-.2-.1-.83-.3-1.57-.97-.58-.52-.97-1.16-1.09-1.35-.11-.2-.01-.3.09-.4.09-.09.2-.23.29-.35.1-.12.13-.2.2-.34.06-.14.03-.26-.02-.36-.05-.1-.43-1.04-.59-1.42-.15-.37-.31-.32-.43-.33h-.37c-.12 0-.33.05-.5.23-.17.18-.65.63-.65 1.54s.67 1.79.76 1.91c.1.12 1.31 2 3.18 2.8.44.19.79.3 1.06.39.45.14.86.12 1.18.07.36-.06 1.12-.46 1.28-.9.16-.44.16-.82.11-.9-.05-.08-.17-.13-.36-.22Z" fill="white"/></svg>
+      <p class="about-body">Johpe Electronics was born from a simple frustration — too many Kenyans were buying phones and laptops that failed within weeks, with no recourse. We personally test every device before it leaves our hands: battery health, screen integrity, camera quality, full function check. What you see is exactly what you get.</p>
+      <a href="https://wa.me/254799776990" target="_blank" rel="noopener" class="about-cta">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M13.5 2.5A7.5 7.5 0 0 0 2.12 11.88L1 15l3.22-1.1A7.5 7.5 0 1 0 13.5 2.5Z" fill="#25D366"/>
+          <path d="M11.25 9.75c-.19-.1-1.12-.55-1.3-.62-.17-.06-.3-.1-.43.1-.12.19-.5.62-.61.75-.11.12-.23.14-.42.05-.2-.1-.83-.3-1.57-.97-.58-.52-.97-1.16-1.09-1.35-.11-.2-.01-.3.09-.4.09-.09.2-.23.29-.35.1-.12.13-.2.2-.34.06-.14.03-.26-.02-.36-.05-.1-.43-1.04-.59-1.42-.15-.37-.31-.32-.43-.33h-.37c-.12 0-.33.05-.5.23-.17.18-.65.63-.65 1.54s.67 1.79.76 1.91c.1.12 1.31 2 3.18 2.8.44.19.79.3 1.06.39.45.14.86.12 1.18.07.36-.06 1.12-.46 1.28-.9.16-.44.16-.82.11-.9-.05-.08-.17-.13-.36-.22Z" fill="#25D366"/>
+        </svg>
         Chat With Us on WhatsApp
       </a>
     </div>
   </section>
 
-  <!-- ══════════════════ FOOTER ══════════════════ -->
-  <footer class="site-footer">
-    <p>© 2025 Johpe Electronics · Nairobi, Kenya</p>
-    <p>📞 <a href="https://wa.me/254729331163">+254 729 331 163</a></p>
+  <!-- ══════════════════ PREMIUM FOOTER ══════════════════ -->
+  <footer class="site-footer" id="contact">
+
+    <!-- Johpe Promise Banner -->
+    <div class="footer-promise">
+      <div class="footer-promise-inner">
+        <span class="footer-promise-icon" aria-hidden="true">🛡️</span>
+        <p class="footer-promise-text">Every device undergoes a strict quality check.<br/><strong>Genuine hardware warranties guaranteed.</strong></p>
+      </div>
+    </div>
+
+    <div class="footer-grid">
+
+      <!-- Business Info -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">📍 Find Us</h4>
+        <p class="footer-address">Tom Mboya Street, Nairobi CBD<br/>Ground Floor, Electronics Plaza<br/>Near Archives Bus Stop</p>
+        <a href="https://wa.me/254799776990?text=Hi%2C%20I%27d%20like%20directions%20to%20your%20shop." target="_blank" rel="noopener" class="footer-directions-btn">
+          Get Directions →
+        </a>
+        <p class="footer-note">📦 <strong>Walk-in pickups welcome.</strong> Call ahead to confirm stock.</p>
+      </div>
+
+      <!-- Operating Hours -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">🕐 Operating Hours</h4>
+        <ul class="footer-hours-list">
+          <li><span>Mon – Fri</span><strong>8:00 AM – 7:00 PM</strong></li>
+          <li><span>Saturday</span><strong>8:00 AM – 6:00 PM</strong></li>
+          <li><span>Sunday</span><strong>10:00 AM – 4:00 PM</strong></li>
+          <li class="hours-note"><span>WhatsApp orders</span><strong>24/7 accepted</strong></li>
+        </ul>
+        <p class="footer-delivery-note">🚚 Same-day Nairobi delivery before 3 PM. Upcountry G4S/Fargo next-day.</p>
+      </div>
+
+      <!-- Payment & Security -->
+      <div class="footer-col footer-col--full">
+        <h4 class="footer-col-title">💳 Secure Payment Methods</h4>
+        <div class="payment-badges">
+          <div class="payment-badge payment-badge--mpesa">
+            <span class="payment-badge-icon">📲</span>
+            <div class="payment-badge-text">
+              <strong>Lipa Na M-Pesa</strong>
+              <span>Till No. verified on order</span>
+            </div>
+          </div>
+          <div class="payment-badge payment-badge--cash">
+            <span class="payment-badge-icon">💵</span>
+            <div class="payment-badge-text">
+              <strong>Cash on Delivery</strong>
+              <span>Nairobi deliveries only</span>
+            </div>
+          </div>
+          <div class="payment-badge payment-badge--verify">
+            <span class="payment-badge-icon">✅</span>
+            <div class="payment-badge-text">
+              <strong>Till Verification</strong>
+              <span>Always confirm before paying</span>
+            </div>
+          </div>
+        </div>
+        <p class="footer-mpesa-warn">⚠️ <strong>Safety tip:</strong> Always verify our M-Pesa Till Number via WhatsApp before making any payment. We'll never ask for payment upfront without confirming your order.</p>
+      </div>
+
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <span class="footer-logo">JOHPE</span>
+        <div class="footer-bottom-links">
+          <a href="https://wa.me/254799776990" target="_blank" rel="noopener">+254 799 776 990</a>
+          <span>·</span>
+          <a href="https://wa.me/254799776990?text=Hi%20Johpe%2C%20I%20have%20a%20general%20inquiry." target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <p class="footer-credit">© 2025 Johpe Electronics · Built by <strong>Flynn Technologies</strong></p>
+      </div>
+    </div>
+
   </footer>
 
-  <!-- ══════════════════ BOTTOM BAR ══════════════════ -->
-  <div class="bottom-bar">
-    <button class="bottom-btn" onclick="openHelper()">
-      <span class="bottom-btn-icon">🤔</span>
-      <div class="bottom-btn-text">
-        <strong>Help Me Choose</strong>
-        <span>Free advice</span>
-      </div>
+  <!-- ══════════════════ FLOATING ACTION BUTTONS ══════════════════ -->
+  <div class="fab-tower" aria-label="Quick actions">
+    <!-- Chatbot / Help FAB (left) -->
+    <button class="fab fab--help" onclick="openHelper(); setActiveTab('support');" aria-label="Open support hub">
+      <span class="fab-icon" aria-hidden="true">💬</span>
+      <span class="fab-label">Help</span>
     </button>
-    <div class="bottom-divider"></div>
-    <button class="bottom-btn" onclick="openCart()">
-      <div class="bottom-btn-icon-wrap">
-        <span class="bottom-btn-icon">🛍️</span>
-      </div>
-      <div class="bottom-btn-text">
-        <strong>My Bag</strong>
-        <span id="cart-total-label">KES 0</span>
-      </div>
-    </button>
+    <!-- WhatsApp FAB (right) -->
+    <a href="https://wa.me/254799776990" target="_blank" rel="noopener" class="fab fab--wa" aria-label="Chat on WhatsApp">
+      <span class="fab-pulse-ring" aria-hidden="true"></span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M20.25 3.75A10.5 10.5 0 0 0 3.167 17.228L1.5 22.5l5.413-1.64A10.5 10.5 0 1 0 20.25 3.75Z" fill="#25D366"/>
+        <path d="M16.875 14.625c-.285-.142-1.687-.83-1.95-.923-.262-.09-.452-.142-.641.143s-.736.922-.903 1.11c-.165.188-.33.214-.615.072-.285-.143-1.205-.444-2.295-1.416-.847-.757-1.42-1.692-1.587-1.977-.166-.286-.018-.44.125-.582.128-.128.285-.333.428-.5.142-.166.19-.286.285-.476.095-.19.048-.357-.024-.5-.071-.143-.641-1.548-.878-2.119-.232-.555-.468-.48-.641-.488h-.547c-.19 0-.499.071-.76.357-.261.285-.998.975-.998 2.378 0 1.403.998 2.762 1.137 2.952.143.19 1.963 3 4.755 4.21.664.286 1.183.457 1.587.585.667.213 1.274.183 1.754.11.536-.08 1.648-.673 1.88-1.322.23-.65.23-1.207.161-1.322-.072-.119-.262-.19-.547-.333Z" fill="white"/>
+      </svg>
+    </a>
   </div>
 
-  <!-- ══════════════════ HELP MODAL ══════════════════ -->
-  <div id="helper-modal" class="modal-overlay hidden" onclick="handleOverlayClick(event,'helper-modal')">
+  <!-- ══════════════════ BOTTOM NAVIGATION BAR ══════════════════ -->
+  <nav class="bottom-nav" aria-label="Main navigation">
+
+    <button class="nav-tab nav-tab--active" data-tab="discover" onclick="handleNavTab('discover')" aria-label="Discover">
+      <span class="nav-tab-icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M3 10.5L10 3.5L17 10.5V17.5H13V13H7V17.5H3V10.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="nav-tab-label">Discover</span>
+      <span class="nav-tab-dot" aria-hidden="true"></span>
+    </button>
+
+    <button class="nav-tab" data-tab="categories" onclick="handleNavTab('categories')" aria-label="Categories">
+      <span class="nav-tab-icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <rect x="3" y="3" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+          <rect x="11" y="3" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+          <rect x="3" y="11" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+          <rect x="11" y="11" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+      </span>
+      <span class="nav-tab-label">Categories</span>
+      <span class="nav-tab-dot" aria-hidden="true"></span>
+    </button>
+
+    <button class="nav-tab" data-tab="bag" onclick="handleNavTab('bag')" aria-label="My Bag">
+      <span class="nav-tab-icon nav-tab-icon--bag" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M7 8V6a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <rect x="3" y="8" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+        <span id="nav-cart-badge" class="nav-cart-badge hidden" aria-live="polite">0</span>
+      </span>
+      <span class="nav-tab-label">My Bag</span>
+      <span class="nav-tab-dot" aria-hidden="true"></span>
+    </button>
+
+    <button class="nav-tab" data-tab="support" onclick="handleNavTab('support')" aria-label="Support">
+      <span class="nav-tab-icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M10 11V10C11.1 10 12 9.1 12 8C12 6.9 11.1 6 10 6C8.9 6 8 6.9 8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="10" cy="13.5" r=".8" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="nav-tab-label">Support</span>
+      <span class="nav-tab-dot" aria-hidden="true"></span>
+    </button>
+
+  </nav>
+
+  <!-- ══════════════════ CATEGORIES MODAL ══════════════════ -->
+  <div id="categories-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-label="Browse categories" onclick="handleOverlayClick(event,'categories-modal')">
     <div class="modal-sheet">
-      <div class="modal-handle"></div>
-      <h3 class="modal-title">Help Me Choose 🎯</h3>
+      <div class="modal-handle" aria-hidden="true"></div>
+      <div class="modal-header-row">
+        <h3 class="modal-title">Browse 🗂️</h3>
+        <button id="close-categories-btn" class="modal-close-x" aria-label="Close">✕</button>
+      </div>
+      <p class="modal-sub">Jump straight to what you need.</p>
+
+      <div class="cat-grid">
+        <button class="cat-tile" onclick="jumpToCategory('smartphones')">
+          <span class="cat-tile-icon">📱</span>
+          <strong>Phones &amp; Tablets</strong>
+          <span>iPhones, Samsung, iPads</span>
+        </button>
+        <button class="cat-tile" onclick="jumpToCategory('laptops')">
+          <span class="cat-tile-icon">💻</span>
+          <strong>Laptops &amp; Computing</strong>
+          <span>Business &amp; student laptops</span>
+        </button>
+        <button class="cat-tile" onclick="jumpToCategory('audio')">
+          <span class="cat-tile-icon">🎵</span>
+          <strong>Smart Audio</strong>
+          <span>Speakers, earphones, subs</span>
+        </button>
+        <button class="cat-tile" onclick="jumpToCategory('power')">
+          <span class="cat-tile-icon">⚡</span>
+          <strong>Power &amp; Solar</strong>
+          <span>Power banks, solar kits</span>
+        </button>
+        <button class="cat-tile" onclick="jumpToCategory('accessories')">
+          <span class="cat-tile-icon">🔌</span>
+          <strong>Accessories</strong>
+          <span>Cables, memory, chargers</span>
+        </button>
+        <button class="cat-tile cat-tile--promo" onclick="jumpToCategory('promo')">
+          <span class="cat-tile-icon">🔥</span>
+          <strong>Hot Deals</strong>
+          <span>Flash promos today</span>
+        </button>
+        <button class="cat-tile" onclick="jumpToCategory('new')">
+          <span class="cat-tile-icon">🟢</span>
+          <strong>Brand New</strong>
+          <span>Sealed stock only</span>
+        </button>
+        <button class="cat-tile" onclick="jumpToCategory('exuk')">
+          <span class="cat-tile-icon">🔵</span>
+          <strong>Premium Ex-UK</strong>
+          <span>UK-origin, fully tested</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ HELP / SUPPORT HUB MODAL ══════════════════ -->
+  <div id="helper-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-label="Help me choose" onclick="handleOverlayClick(event,'helper-modal')">
+    <div class="modal-sheet">
+      <div class="modal-handle" aria-hidden="true"></div>
+      <div class="modal-header-row">
+        <h3 class="modal-title">Help Me Choose 🎯</h3>
+        <button id="close-helper-btn" class="modal-close-x" aria-label="Close">✕</button>
+      </div>
       <p class="modal-sub">Tell us what you need — we'll show the right products.</p>
 
       <p class="modal-section-label">💰 What's your budget?</p>
       <div class="helper-grid">
-        <button class="helper-btn" onclick="applyHelperFilter('budget-low')">
-          <strong>Under KES 25,000</strong>
-          <span>Basic & reliable picks</span>
-        </button>
-        <button class="helper-btn" onclick="applyHelperFilter('budget-mid')">
-          <strong>KES 25k – 60k</strong>
-          <span>Mid-range performers</span>
-        </button>
-        <button class="helper-btn" onclick="applyHelperFilter('budget-high')">
-          <strong>KES 60k – 100k</strong>
-          <span>Premium flagships</span>
-        </button>
-        <button class="helper-btn" onclick="applyHelperFilter('budget-premium')">
-          <strong>KES 100k+</strong>
-          <span>Top-of-the-line</span>
-        </button>
+        <button class="helper-btn" onclick="applyHelperFilter('budget-low')"><strong>Under KES 25,000</strong><span>Basic &amp; reliable picks</span></button>
+        <button class="helper-btn" onclick="applyHelperFilter('budget-mid')"><strong>KES 25k – 60k</strong><span>Mid-range performers</span></button>
+        <button class="helper-btn" onclick="applyHelperFilter('budget-high')"><strong>KES 60k – 100k</strong><span>Premium flagships</span></button>
+        <button class="helper-btn" onclick="applyHelperFilter('budget-premium')"><strong>KES 100k+</strong><span>Top-of-the-line</span></button>
       </div>
 
       <p class="modal-section-label">🖥️ What do you need it for?</p>
       <div class="helper-list">
-        <button class="helper-btn wide" onclick="applyHelperFilter('use-phone')">
-          <strong>📱 I need a smartphone</strong>
-          <span>Calls, social media, camera</span>
+        <button class="helper-btn wide" onclick="applyHelperFilter('use-phone')"><strong>📱 I need a smartphone or tablet</strong><span>Calls, social media, camera</span></button>
+        <button class="helper-btn wide" onclick="applyHelperFilter('use-work')"><strong>💼 Work &amp; Office tasks</strong><span>Documents, spreadsheets, video calls</span></button>
+        <button class="helper-btn wide" onclick="applyHelperFilter('use-student')"><strong>🎓 Student / Learning</strong><span>Research, assignments, online classes</span></button>
+        <button class="helper-btn wide" onclick="applyHelperFilter('use-promo')"><strong>🔥 Show me the best deals</strong><span>Flash promos &amp; discounted stock</span></button>
+      </div>
+
+      <div class="support-hub-divider" aria-hidden="true"></div>
+      <h3 class="support-hub-title">💬 Customer Care &amp; FAQs</h3>
+      <p class="support-hub-sub">Tap an option — we'll open WhatsApp with your message ready.</p>
+
+      <div class="support-hub-list" role="list">
+        <button class="support-hub-btn" onclick="openSupportChat('location')" role="listitem">
+          <span class="support-hub-icon" aria-hidden="true">📍</span>
+          <div class="support-hub-btn-text"><strong>Location &amp; Delivery</strong><span>Find us or get delivery details</span></div>
+          <span class="support-hub-arrow" aria-hidden="true">›</span>
         </button>
-        <button class="helper-btn wide" onclick="applyHelperFilter('use-work')">
-          <strong>💼 Work & Office tasks</strong>
-          <span>Documents, spreadsheets, video calls</span>
+        <button class="support-hub-btn" onclick="openSupportChat('warranty')" role="listitem">
+          <span class="support-hub-icon" aria-hidden="true">🛡️</span>
+          <div class="support-hub-btn-text"><strong>Warranty &amp; Verification Terms</strong><span>What's covered &amp; for how long</span></div>
+          <span class="support-hub-arrow" aria-hidden="true">›</span>
         </button>
-        <button class="helper-btn wide" onclick="applyHelperFilter('use-student')">
-          <strong>🎓 Student / Learning</strong>
-          <span>Research, assignments, online classes</span>
+        <button class="support-hub-btn" onclick="openSupportChat('mpesa')" role="listitem">
+          <span class="support-hub-icon" aria-hidden="true">💳</span>
+          <div class="support-hub-btn-text"><strong>M-Pesa Till Verification</strong><span>Confirm Till Number before paying</span></div>
+          <span class="support-hub-arrow" aria-hidden="true">›</span>
         </button>
-        <button class="helper-btn wide" onclick="applyHelperFilter('use-promo')">
-          <strong>🔥 Show me the best deals</strong>
-          <span>Flash promos & discounted stock</span>
+        <button class="support-hub-btn" onclick="openSupportChat('tradein')" role="listitem">
+          <span class="support-hub-icon" aria-hidden="true">🔄</span>
+          <div class="support-hub-btn-text"><strong>Device Trade-ins &amp; Upgrades</strong><span>Trade your old device for value</span></div>
+          <span class="support-hub-arrow" aria-hidden="true">›</span>
+        </button>
+        <button class="support-hub-btn support-hub-btn--agent" onclick="openSupportChat('agent')" role="listitem">
+          <span class="support-hub-icon" aria-hidden="true">👤</span>
+          <div class="support-hub-btn-text"><strong>Chat directly with an Agent</strong><span>Live support — usually under 5 mins</span></div>
+          <span class="support-hub-arrow" aria-hidden="true">›</span>
         </button>
       </div>
     </div>
   </div>
 
   <!-- ══════════════════ CART MODAL ══════════════════ -->
-  <div id="cart-modal" class="modal-overlay hidden" onclick="handleOverlayClick(event,'cart-modal')">
+  <div id="cart-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-label="Shopping bag" onclick="handleOverlayClick(event,'cart-modal')">
     <div class="modal-sheet">
-      <div class="modal-handle"></div>
-      <h3 class="modal-title">My Bag 🛍️</h3>
-      <p class="modal-sub">Review your order before confirming</p>
+      <div class="modal-handle" aria-hidden="true"></div>
+      <div class="modal-header-row">
+        <h3 class="modal-title">My Bag 🛍️</h3>
+        <button id="close-cart-btn" class="modal-close-x" aria-label="Close bag">✕</button>
+      </div>
+      <p class="modal-sub">Review your order before confirming on WhatsApp</p>
 
-      <div id="cart-items-list" class="cart-list"></div>
+      <div id="cart-items-list" class="cart-list" aria-live="polite"></div>
 
-      <div id="cart-empty" class="cart-empty hidden">
-        <span>🛒</span>
+      <div id="cart-empty" class="cart-empty hidden" role="status">
+        <span aria-hidden="true">🛒</span>
         <p>Your bag is empty</p>
         <span>Add items from the catalog above</span>
       </div>
 
       <div id="cart-footer" class="cart-footer hidden">
         <div class="cart-total-row">
-          <span>Total</span>
+          <span>Order Total</span>
           <strong id="cart-grand-total">KES 0</strong>
         </div>
-        <button class="checkout-btn" onclick="checkoutWhatsApp()">
-          <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M13.5 2.5A7.5 7.5 0 0 0 2.12 11.88L1 15l3.22-1.1A7.5 7.5 0 1 0 13.5 2.5Z" fill="white"/><path d="M11.25 9.75c-.19-.1-1.12-.55-1.3-.62-.17-.06-.3-.1-.43.1-.12.19-.5.62-.61.75-.11.12-.23.14-.42.05-.2-.1-.83-.3-1.57-.97-.58-.52-.97-1.16-1.09-1.35-.11-.2-.01-.3.09-.4.09-.09.2-.23.29-.35.1-.12.13-.2.2-.34.06-.14.03-.26-.02-.36-.05-.1-.43-1.04-.59-1.42-.15-.37-.31-.32-.43-.33h-.37c-.12 0-.33.05-.5.23-.17.18-.65.63-.65 1.54s.67 1.79.76 1.91c.1.12 1.31 2 3.18 2.8.44.19.79.3 1.06.39.45.14.86.12 1.18.07.36-.06 1.12-.46 1.28-.9.16-.44.16-.82.11-.9-.05-.08-.17-.13-.36-.22Z" fill="#25D366"/></svg>
+        <button class="checkout-btn" onclick="checkoutWhatsApp()" aria-label="Confirm order via WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M13.5 2.5A7.5 7.5 0 0 0 2.12 11.88L1 15l3.22-1.1A7.5 7.5 0 1 0 13.5 2.5Z" fill="white"/>
+            <path d="M11.25 9.75c-.19-.1-1.12-.55-1.3-.62-.17-.06-.3-.1-.43.1-.12.19-.5.62-.61.75-.11.12-.23.14-.42.05-.2-.1-.83-.3-1.57-.97-.58-.52-.97-1.16-1.09-1.35-.11-.2-.01-.3.09-.4.09-.09.2-.23.29-.35.1-.12.13-.2.2-.34.06-.14.03-.26-.02-.36-.05-.1-.43-1.04-.59-1.42-.15-.37-.31-.32-.43-.33h-.37c-.12 0-.33.05-.5.23-.17.18-.65.63-.65 1.54s.67 1.79.76 1.91c.1.12 1.31 2 3.18 2.8.44.19.79.3 1.06.39.45.14.86.12 1.18.07.36-.06 1.12-.46 1.28-.9.16-.44.16-.82.11-.9-.05-.08-.17-.13-.36-.22Z" fill="#25D366"/>
+          </svg>
           Confirm Order via WhatsApp
         </button>
       </div>
     </div>
   </div>
 
-  <!-- Toast -->
-  <div id="toast" class="toast" role="status" aria-live="polite">✓ Added to bag</div>
+  <!-- ══════════════════ TOAST ══════════════════ -->
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
   <script src="script.js"></script>
 </body>
